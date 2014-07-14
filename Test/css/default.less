@@ -1,0 +1,314 @@
+.whiteBg {
+	background:#fff;
+}
+@lightBlue:#82c9c5;
+@richBlue:#1a60c0;
+@gray:#c5c5c5;
+
+.grayBorder {
+	border:1px solid @gray;
+}
+
+.text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+	text-shadow: @string;
+}
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+	-webkit-border-top-right-radius:    @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius:  @bottomleft;
+	-webkit-border-top-left-radius:     @topleft;
+
+	-moz-border-radius-topright:        @topright;
+	-moz-border-radius-bottomright:     @bottomright;
+	-moz-border-radius-bottomleft:      @bottomleft;
+	-moz-border-radius-topleft:         @topleft;
+
+	border-top-right-radius:            @topright;
+	border-bottom-right-radius:         @bottomright;
+	border-bottom-left-radius:          @bottomleft;
+	border-top-left-radius:             @topleft;
+
+	-moz-background-clip:    padding; 
+	-webkit-background-clip: padding-box; 
+	background-clip:         padding-box; 
+}
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+ 	background-color: @startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+.border(@width: 1px, @type: solid, @color: #bbb){
+    border:@arguments;
+}
+.img {
+	background-image:url(../img/sprite.jpg);
+}
+
+
+
+body {
+	background:#f7f7f7;
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+}
+.top-bar {
+	background:#f6f5f1;
+	height:6px;
+	width:auto;
+	border-bottom:1px solid #e5e5e3;
+}
+.blueBar {
+	height:3px;
+	background:@lightBlue;
+}
+header {
+	height:63px;
+	padding:15px;
+	.whiteBg;
+	border-bottom:1px solid #ccc;
+}
+.logo {
+	width:170px;
+	height:41px;
+	display:block;
+	.img;
+	background-position:-142px 0;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:15px;
+}
+.shoping-cart {
+	width:35px;
+	height:30px;
+	background-position:-3px -7px;
+	.img;
+	float:right;
+}
+header .menu  {
+	float:left;
+}
+header .menu .glyphicon {
+	display:block;
+	padding:0 0 0 5px;
+}
+header .menu i {
+	display:block;
+	font-style:normal;
+	text-transform:uppercase;
+	font-size:10px;
+}
+.container-fluid {
+	margin:20px;
+	padding:0;
+}
+.blueBtn {
+	border:1px solid @richBlue;
+	.border-radius (@radius: 3px);
+	text-align:center;	
+	margin-bottom:20px;
+}
+.whiteOutline {
+	width:50%;
+	float:left;
+	padding:10px 0;
+	cursor:pointer;
+	color:@richBlue;
+}
+.blueOutline {
+	background:@richBlue;
+	color:#fff;
+	.whiteOutline;
+}
+.ticket-mod {
+	.border-radius (@radius: 3px);
+	background:#fff;
+	.grayBorder;
+	margin-bottom:20px;
+}
+.tableMod {
+	display:table;
+	width:100%;
+	padding:20px;
+}
+.checkmark {
+	width:50px;
+	margin-right:10px;
+	display:table-cell;
+	vertical-align:middle;
+}
+.checkmark span {
+	.img;
+	display:block;
+	background-position:-87px -3px;
+	width:30px;
+	height:30px;
+}
+.name-mod {
+	float:left;
+	width:80%;
+	color:@richBlue;
+	font-family:Times New Roman, serif;
+	font-size:22px;
+}
+.name-mod span {
+	display:block;
+	color:#888;
+	font-family:Tahoma;
+	font-size:14px;
+}
+.collapseBtn {
+	display:table-cell;
+	vertical-align:middle;
+	width:5%;
+}
+.collapseBtn span {
+	.grayBorder;
+	.border-radius (@radius: 20px);
+	padding:10px 15px;
+	display:block;
+	width:40px;
+}
+.triangle-up {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid black;
+}
+.date-mod {
+	border-top:1px dashed @gray;
+	border-bottom:1px solid @gray;
+	padding:5px;
+}
+.date {
+	width:50%;
+	float:left;
+	font-size:11px;
+	text-align:center;
+	color:#000;
+	text-transform:uppercase;
+	padding:5px 0;
+	border-right:1px solid @gray;
+}
+.time {
+	.date;
+	border-right:none;
+}
+.date-mod span {
+	color:@richBlue;
+	font-size:14px;
+}
+.ticketType {
+	background:#daf1e1;
+	padding:10px;
+	color:#009d39;
+	border-bottom:1px solid @gray;
+	text-align:center;
+	text-transform:uppercase;
+}
+.barcodeMod {
+	padding:20px 32px;
+}
+.barcodeMod .buttonEmpty {
+	padding:10px;
+	width:47%;
+	float:left;
+	.grayBorder;
+	.border-radius (3px);
+}
+.barcodeMod .buttonFull {
+	padding:15px;
+	font-size:15px;
+	width:47%;
+	float:right;
+	background:@gray;
+	.border-radius (3px);
+	text-align:center;
+	color:#fff;
+}
+.icon-passport {
+	.img;
+	background-position:-46px -4px;
+	width:30px;
+	height:30px;
+	display:block;
+	float:left;
+}
+.passportType {
+	float:left;
+	text-transform:uppercase;
+	font-size:10px;
+	padding-left:10px;
+	color:#666;
+	line-height:11px;
+	padding-top:3px;
+}
+.passportType span {
+	display:block;
+	font-size:13px;
+	color:#000;
+}
+.barcodeImg {
+	.img;
+	background-position:-4px -46px;
+	display:block;
+	width:307px;
+	height:94px;
+	margin-top:20px;
+}
+.barcodeImg span {
+	padding:78px 0 0 75px;
+	display:block;
+}
+
+
+
+
+

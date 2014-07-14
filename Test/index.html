@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Space Needle</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/default.css" rel="stylesheet" type="text/css">
+<link href="css/default.less" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script language="javascript">
+	$(document).ready(function() {
+		$('.blueBtn span').click(function () {
+		   var self = $(this),
+			   data = self.data();
+			self.addClass('blueOutline').removeClass('whiteOutline');
+			self.siblings().removeClass('blueOutline').addClass('whiteOutline');
+			$('.group').fadeOut();
+			$(data.show).fadeIn();
+		});
+	});
+</script>
+</head>
+
+<body>
+    <div class="top-bar"></div>
+    <div class="blueBar"></div>
+    <header class="clearfix">
+         <div class="menu">
+         	<span class="glyphicon glyphicon-align-justify btn-lg"></span>
+         	<i>Menu</i>
+         </div>
+      <div class="logo"></div>
+      <i class="shoping-cart"></i>
+    </header>
+    <div class="container-fluid">
+    	<div class="blueBtn clearfix">
+        	<span data-show="#receiptSection" class="whiteOutline">Receipt</span>
+ 			<span data-show="#ticketSection" class="blueOutline">Ticket(s)</span>
+        </div>
+        
+     <div id="ticketSection" class="group">
+        <div class="ticket-mod">
+        	<div class="tableMod">
+                <div class="checkmark">
+                    <span></span>
+                </div>
+                <div class="name-mod">
+                    Wendy Anderson
+                    <span>Daily Admission</span>
+                </div>
+                <div class="collapseBtn">
+                    <span><div class="triangle-up"></div></span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="date-mod clearfix">
+            	<div class="date">Tuesday, <span>July 15</span></div>
+                <div class="time"><span>12:00</span> pm</div>
+            </div>
+            <div class="ticketType">
+            	Active Mobile Ticket - Scan Now!
+            </div>
+            <div class="barcodeMod">
+            	<div class="buttonEmpty clearfix">
+                    <i class="icon-passport"></i>
+                    <div class="passportType">add to <span>Passbook</span></div>
+                </div>
+                <div class="buttonFull">
+                	Details
+                </div>
+                <div class="clearfix"></div>
+                <div class="barcodeImg">
+                	<span>5076-2548-3115-2618-4</span>
+                </div>
+            </div>
+        </div>
+       
+        <div class="ticket-mod">
+        	<div class="tableMod">
+                <div class="checkmark">
+                    <span></span>
+                </div>
+                <div class="name-mod">
+                    John Anderson
+                    <span>Daily Admission</span>
+                </div>
+                <div class="collapseBtn">
+                    <span><div class="triangle-up"></div></span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+         </div>
+         
+          <div class="ticket-mod">
+        	<div class="tableMod">
+                <div class="checkmark">
+                    <span></span>
+                </div>
+                <div class="name-mod">
+                    Alex Anderson
+                    <span>Daily Admission</span>
+                </div>
+                <div class="collapseBtn">
+                    <span><div class="triangle-up"></div></span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+         </div>
+       </div>
+       
+       <div id="receiptSection" class="group hide">
+       
+       </div>
+        
+    </div>
+</body>
+</html>
